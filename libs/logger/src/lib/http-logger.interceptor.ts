@@ -1,4 +1,6 @@
-import { Injectable } from '@angular/core';
+import { LoggerConfig } from './logger.config';
+import { LOGGER_CONFIG } from './logger.token';
+import { Injectable, Inject, Optional } from '@angular/core';
 import {
   HttpRequest,
   HttpHandler,
@@ -10,10 +12,10 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class HttpLoggerInterceptor implements HttpInterceptor {
 
-  constructor() {}
+  constructor(@Inject(LOGGER_CONFIG) private loggerConfig: LoggerConfig) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    console.group('New Request from app: ');
+    console.group('New Request from app: ', this.loggerConfig?.appName || '');
     console.log(request);
     console.groupEnd();
     

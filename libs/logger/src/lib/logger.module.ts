@@ -1,5 +1,7 @@
+import { LOGGER_CONFIG } from './logger.token';
+import { LoggerConfig } from './logger.config';
 import { HttpLoggerInterceptor } from './http-logger.interceptor';
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -13,4 +15,17 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     }
   ]
 })
-export class LoggerModule {}
+export class LoggerModule {
+  static init(config: LoggerConfig): ModuleWithProviders<LoggerModule> {
+    return {
+      ngModule: LoggerModule,
+      providers: [
+        {
+          provide: LOGGER_CONFIG,
+          useValue: config,
+          multi: false
+        }
+      ]
+    }
+  }
+}
