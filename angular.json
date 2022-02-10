@@ -5,6 +5,7 @@
     "backoffice-e2e": "apps/backoffice-e2e",
     "logger": "libs/logger",
     "shop": "apps/shop",
-    "shop-e2e": "apps/shop-e2e"
+    "shop-e2e": "apps/shop-e2e",
+    "ui": "libs/ui"
   }
 }

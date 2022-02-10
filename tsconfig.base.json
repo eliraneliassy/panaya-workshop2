@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@panaya/logger": ["libs/logger/src/index.ts"]
+      "@panaya/logger": ["libs/logger/src/index.ts"],
+      "@panaya/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
