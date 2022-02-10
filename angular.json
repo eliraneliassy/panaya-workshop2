@@ -1,6 +1,9 @@
 {
   "version": 2,
   "projects": {
+    "backoffice": "apps/backoffice",
+    "backoffice-e2e": "apps/backoffice-e2e",
+    "logger": "libs/logger",
     "shop": "apps/shop",
     "shop-e2e": "apps/shop-e2e"
   }

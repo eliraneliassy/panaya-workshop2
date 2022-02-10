@@ -1,12 +1,10 @@
-
+import { HttpClientModule } from '@angular/common/http';
+import { LoggerModule } from '@panaya/logger';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { LoggerModule } from '@panaya/logger';
-import { HttpClientModule } from '@angular/common/http';
-
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
@@ -14,4 +12,4 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
